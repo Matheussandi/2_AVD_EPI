@@ -19,6 +19,7 @@ routes.get('/epi', episController.index);
 
 routes.post('/entregaepi', deliveryEpiController.create);
 routes.get('/entregaepi', deliveryEpiController.index);
+routes.delete('/entregaepi/:id', deliveryEpiController.delete);
 
 export { routes }
 
