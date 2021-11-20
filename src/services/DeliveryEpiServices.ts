@@ -63,7 +63,15 @@ class DeliveryEpiServices {
 
 
     async delete({ id }: IDeliveryEpiID) {
-        
+        const deliveryEpiRepository = getCustomRepository(DeliveryEpiRepository);
+
+        let deliveryEpi = await deliveryEpiRepository.findOne({ id });
+
+        if (!deliveryEpi) {
+            throw new Error(`ID não encontrado`);
+        }
+
+        return await deliveryEpiRepository.delete({ id });
     }
     
 }
