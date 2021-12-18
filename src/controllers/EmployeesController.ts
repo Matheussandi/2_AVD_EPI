@@ -40,7 +40,7 @@ class EmployeesController {
 
         try {
             await employeesServices.delete({ id })
-            return res.json({ message: 'Cliente excluído com sucesso !!!'})
+            return res.json({ message: 'Funcionário excluído com sucesso !!!'})
         } catch (error) {
             return res
                     .status(400)
