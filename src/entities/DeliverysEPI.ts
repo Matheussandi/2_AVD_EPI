@@ -21,7 +21,7 @@ class DeliveryEpi {
 
     @JoinColumn({ name: 'employee_id' })
     @ManyToOne(() => Employee )
-    employee: Employee;
+    employees: Employee;
 
     @Column()
     employee_id: string;
