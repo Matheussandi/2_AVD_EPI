@@ -41,9 +41,16 @@ class EpisServices {
 
 
     async delete({ id }: IEpiID) {
-        
+        const episRepository = getCustomRepository(EpisRepository);
+
+        let epis = await episRepository.findOne({ id });
+
+        if (!epis) {
+            throw new Error(`EPI não encontrada`);
+        }
+
+        return await episRepository.delete({ id });
     }
-    
 }
 
 export { EpisServices }
