@@ -16,6 +16,7 @@ routes.delete('/funcionarios/:id', employeesController.delete);
 
 routes.post('/epi', episController.create);
 routes.get('/epi', episController.index);
+routes.delete('/epi/:id', episController.delete);
 
 routes.post('/entregaepi', deliveryEpiController.create);
 routes.get('/entregaepi', deliveryEpiController.index);
