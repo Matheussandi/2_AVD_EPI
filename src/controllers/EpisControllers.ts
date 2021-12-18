@@ -34,10 +34,18 @@ class EpisController {
     }
 
     async delete(req: Request, res: Response) {
+        const episServices = new EpisServices();
+        const { id } = req.params;
 
+        try {
+            await episServices.delete({ id })
+            return res.json({ message: 'EPI excluído com sucesso !!!'})
+        } catch (error) {
+            return res
+                    .status(400)
+                    .json({ messagem: error.message })
+        }
     }
-
-
 }
 
 export { EpisController }
