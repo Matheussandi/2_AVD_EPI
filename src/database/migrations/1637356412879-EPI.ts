@@ -5,7 +5,7 @@ export class EPI1637356412879 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "epis",
+                name: "epi",
                 columns: [
                     {
                         name: 'id',
@@ -41,7 +41,7 @@ export class EPI1637356412879 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable('epis')
+        await queryRunner.dropTable('epi')
     }
 
 }
