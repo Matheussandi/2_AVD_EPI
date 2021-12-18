@@ -19,7 +19,7 @@ export class CriarEntregaEPI1624028047652 implements MigrationInterface {
                     },
                     {
                         name: "epi_id",
-                        type: "varchar",
+                        type: "uuid",
                         isNullable: true,
                     },
                     {
